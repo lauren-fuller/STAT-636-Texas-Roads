@@ -9,14 +9,13 @@ The project evaluates how transportation networks in the Austin, Texas area resp
 A PDF file documenting the format and attributes of the dataset being used.
 
 ### `STAT 636_Leander_Cedar_Park_Network.ipynb`  
-Jupyter Notebook containing the primary analysis for the Leander & Cedar Park area.
+Jupyter Notebook containing the primary analysis for the Leander & Cedar Park area. Contains the code used to construct the Leander & Cedar Park road network from the Texas OSM shapefile and conduct various analyses.
 
 ### `STAT636_Austin_Network.ipynb`  
-Jupyter Notebook containing the primary analysis for the Austin area.
+Jupyter Notebook containing the primary analysis for the Austin area. Contains the code used to construct the Austin road network from the Texas OSM shapefile and conduct various analyses.
 
 ### `build_texas_road_network.py`  
-Python script that reads the Texas OpenStreetMap road shapefile using GeoPandas and builds a graph representation of the road network. This script is used to preprocess raw spatial data and generate derived network files used by the notebooks.
-
+Python script that loads the Geofabrik Texas roads shapefile and filters it to include only drivable road types. For each road segment, it computes the segment length and an estimated travel time, then constructs a directed road network graph. The resulting network is saved in two formats: a GraphML file (texas_roads.graphml) for portability and a pickled NetworkX graph (texas_roads.pkl) for faster loading in Python notebooks.
 
 ## Data Source
 
