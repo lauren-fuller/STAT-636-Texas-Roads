@@ -17,19 +17,20 @@ Jupyter Notebook containing the primary analysis for the Austin area. Contains t
 ### `build_texas_road_network.py`  
 Python script that loads the Geofabrik Texas roads shapefile and filters it to include only drivable road types. For each road segment, it computes the segment length and an estimated travel time, then constructs a directed road network graph. The resulting network is saved in two formats: a GraphML file (texas_roads.graphml) for portability and a pickled NetworkX graph (texas_roads.pkl) for faster loading in Python notebooks.
 
+
 ## Data Source
 
 This project uses OpenStreetMap road data provided by Geofabrik. Due to the size of the dataset, raw shapefiles are not included in this repository and must be downloaded separately.
 
 ### Downloading the Data
 
-1. Navigate to the Geofabrik North America download page:
-   https://download.geofabrik.de/north-america.html
+1. Navigate to the Texas OpenStreetMap download page:  
+   https://download.geofabrik.de/north-america/us/texas.html
 
-2. Download the Texas dataset in GIS (shapefile) format. The file name will be similar to:
-   texas-latest-free.shp.zip
+2. Download the Texas dataset in GIS (shapefile) format. The file name will be similar to:  
+   `texas-latest-free.shp.zip`
 
-3. Unzip the downloaded file. The extracted folder will contain multiple shapefile layers. All shapefile components must be stored in the same directory as the python files.
+3. Unzip the downloaded file. The extracted folder will contain multiple shapefile layers.  
 
 ## Reproducing the Analysis
 
